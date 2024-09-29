@@ -67,8 +67,9 @@ SystemWatcher::Run()
 			char padding[NLMSG_HDRLEN];
 		};
 
-		struct cn_msg msg;
+		//struct cn_msg msg;
 		enum proc_cn_mcast_op op;
+		struct cn_msg msg;
 	} __attribute__((packed, aligned(NLMSG_ALIGNTO))) request;
 
     memset(&request, 0, sizeof(request));
@@ -90,7 +91,7 @@ SystemWatcher::Run()
 	}
 
 	fBuf = (struct nlmsghdr*)malloc(CONNECTOR_MAX_MSG_SIZE);
-	if (fBuf <= 0) {
+	if (fBuf == NULL) {
 		close(fSocket);
 		TRACE("SystemWatcher: Memory error\n");
 		return B_NO_MEMORY;
@@ -165,7 +166,7 @@ SystemWatcher::HandleProcEvent(struct cn_msg* header)
 		return;
 
 	struct proc_event* event = (struct proc_event*)header->data;
-	switch (event->what)
+	/*switch (event->what)
 	{
 		case proc_event::what::PROC_EVENT_FORK:
 		{
@@ -221,7 +222,7 @@ SystemWatcher::HandleProcEvent(struct cn_msg* header)
 
 		default:
 			break;
-	}
+	}*/
 }
 
 

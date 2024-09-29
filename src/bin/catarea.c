@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <OS.h>
+#include <stdlib.h>
 
 int main(int argc, char **argv)
 {

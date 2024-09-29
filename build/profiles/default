@@ -35,7 +35,7 @@ ImageInclude("/lib" ${SYSTEM_LIBS})
 
 set(SYSTEM_TRANSLATORS
 	BMPTranslator
-	EXRTranslator
+	#EXRTranslator
 	GIFTranslator
 	HVIFTranslator
 	ICNSTranslator

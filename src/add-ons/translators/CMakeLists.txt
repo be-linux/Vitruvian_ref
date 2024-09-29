@@ -1,7 +1,7 @@
 add_subdirectory(shared)
 
 add_subdirectory(bmp)
-add_subdirectory(exr)
+#add_subdirectory(exr)
 add_subdirectory(gif)
 add_subdirectory(hvif)
 add_subdirectory(icns)

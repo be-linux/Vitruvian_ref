@@ -1,3 +1,4 @@
+#include <stdlib.h>
 // TODO fix that
 typedef struct __DIR {
 	int				fd;

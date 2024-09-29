@@ -11,6 +11,7 @@
 */
 
 #include <OS.h>
+extern sem_id create_sem_etc(int32 count, const char *name, team_id owner);
 
 #include <unistd.h>
 #include <sys/types.h>

@@ -5,6 +5,7 @@
 
 
 #include <OS.h>
+extern status_t _kern_on_exit_thread(void (*callback)(void *), void *data);
 
 #include <stdlib.h>
 #include <stdio.h>
